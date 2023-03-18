@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">QuizziePie</string>
+    <string name="image_background">Image Background</string>
+    <string name="signin_app_logo">signin app logo</string>
+    <string name="signup_app_logo">signup app logo</string>
+    <string name="hello">Hello,</string>
+    <string name="welcome_back">Welcome Back !</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="accept_terms_condition"><![CDATA[Accept terms & Condition]]></string>
+    <string name="create_an_account">Create an account</string>
+    <string name="create_des">Let\'s help you set up your account, \n it won\'t take long</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="name">Name</string>
+    <string name="signup_email">Email</string>
+    <string name="signup_password">Password</string>
+    <string name="signup_enter_email">Enter Email</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="don_t_worry">Don\'t Worry</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="splash_screen_image">Splash Screen Image</string>
+</resources>

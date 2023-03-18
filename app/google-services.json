@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "955099740064",
+    "project_id": "quizziepie",
+    "storage_bucket": "quizziepie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955099740064:android:da352c738a85e91b7456c5",
+        "android_client_info": {
+          "package_name": "com.example.quizziepie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955099740064-kijlr8d9smkssh06a5vbf9enfev2koha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9Ra9FhraZUtp_jbV4pFdELBJ1-7I5jgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955099740064-kijlr8d9smkssh06a5vbf9enfev2koha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
