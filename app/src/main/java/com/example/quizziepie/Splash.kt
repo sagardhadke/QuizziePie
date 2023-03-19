@@ -6,9 +6,14 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.example.quizziepie.databinding.ActivitySplashBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
 
 class Splash : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
+
+     var auth = FirebaseAuth.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
@@ -16,10 +21,22 @@ class Splash : AppCompatActivity() {
 
         supportActionBar?.hide()
 
+
+
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this,SignIn::class.java)
-            startActivity(intent)
-            finish()
+
+
+            if (auth.currentUser != null){
+                val intent = Intent(this,MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }else{
+                val intent = Intent(this,SignIn::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+
         },2500)
 
     }

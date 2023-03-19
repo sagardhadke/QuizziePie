@@ -38,7 +38,8 @@ class SignUp : AppCompatActivity() {
                     binding.signUpEmail.requestFocus()
                     Toast.makeText(this,"Enter Email Address.",Toast.LENGTH_SHORT).show()
             }
-            else if (password.isEmpty()){
+            else if (password.isEmpty()) {
+                binding.signUpPassword.length()>=8
                 binding.signUpPassword.error = "Enter Valid Password"
                 binding.signUpPassword.requestFocus()
                 Toast.makeText(this,"Enter Valid Password",Toast.LENGTH_SHORT).show()
@@ -48,16 +49,11 @@ class SignUp : AppCompatActivity() {
                 Toast.makeText(this,"Password Don't Match",Toast.LENGTH_SHORT).show()
             } else if (binding.signCheckbox.isChecked){
 
-
-            }else{
-                binding.signCheckbox.error = "Please Accept Terms and Condition"
-                binding.signCheckbox.requestFocus()
-
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCanceledListener {
                         Toast.makeText(
                             this,
-                            "Sign up Filed Please try again later",
+                            "Sign up Failed Please try again later",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -67,26 +63,24 @@ class SignUp : AppCompatActivity() {
                         startActivity(intent)
                     }
                     .addOnFailureListener {
-                        Toast.makeText(this, it.localizedMessage?.toString(), Toast.LENGTH_SHORT)
+                        Toast.makeText(this, it.localizedMessage?.toString(), Toast.LENGTH_LONG)
                             .show()
                     }
 
+            }else{
+                binding.signCheckbox.error = "Please check Terms and condition"
+                binding.signCheckbox.requestFocus()
+                Toast.makeText(this,"Please Accept Terms and condition.",Toast.LENGTH_SHORT).show()
             }
 
 
 
             binding.signInAlreadyHave.setOnClickListener {
-
-                if (binding.signCheckbox.isChecked){
-                    val intent = Intent(this,SignIn::class.java)
+                    val intent = Intent(this, SignIn::class.java)
                     startActivity(intent)
-                }else(
-                        Toast.makeText(this,"Please Accept Terms & Condition",Toast.LENGTH_LONG).show()
-                        )
-
+                    finish()
             }
         }
-
 
 
     }
