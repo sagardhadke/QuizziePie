@@ -52,6 +52,7 @@ class SignIn : AppCompatActivity() {
                     .addOnFailureListener {
                         Toast.makeText(this, it.localizedMessage?.toString(),Toast.LENGTH_LONG).show()
                     }
+
             }else{
                 binding.signInCheckbox.requestFocus()
                 binding.signInCheckbox.error = "accept Terms and condition"

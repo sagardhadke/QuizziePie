@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/forgot_background" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/reset_pass"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
@@ -101,6 +101,6 @@
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/reset_pass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
