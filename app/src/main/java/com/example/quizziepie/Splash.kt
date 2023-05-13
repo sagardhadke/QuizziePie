@@ -12,7 +12,7 @@ import com.google.firebase.ktx.Firebase
 class Splash : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
 
-     var auth = FirebaseAuth.getInstance()
+    private var auth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
